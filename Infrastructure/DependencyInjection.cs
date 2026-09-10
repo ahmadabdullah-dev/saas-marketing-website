@@ -31,7 +31,11 @@ public static class DependencyInjection
 
         services.AddDataProtection();
 
-     
+        services.AddScoped<IContactSubmissionRepository, ContactSubmissionRepository>();
+        services.AddScoped<IDemoRequestRepository, DemoRequestRepository>();
+        services.AddScoped<INewsLetterSubscriberRepository, NewsletterSubscriberRepository>();
+        services.AddScoped<IPricingPlanRepository, PricingPlanRepository>();
+        services.AddScoped<ITestimonialRepository, TestimonialRepository>();
 
         return services;
     }
