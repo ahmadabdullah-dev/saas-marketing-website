@@ -1,13 +1,14 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace Infrastructure;
-public class AppDbContext : DbContext
+public class AppDbContext : IdentityDbContext<AppUser, AppRole, Guid>
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
     public DbSet<ContactSubmission> ContactSubmissions => Set<ContactSubmission>();
     public DbSet<DemoRequest> DemoRequests => Set<DemoRequest>();
-    public DbSet<NewsletterSubscriber> NewsletterSubscribers => Set<NewsletterSubscriber>();
+    public DbSet<NewsLetterSubscriber> NewsLetterSubscribers => Set<NewsLetterSubscriber>();
     public DbSet<PricingPlan> PricingPlans => Set<PricingPlan>();
     public DbSet<PricingFeature> PricingFeatures => Set<PricingFeature>();
     public DbSet<Testimonial> Testimonials => Set<Testimonial>();

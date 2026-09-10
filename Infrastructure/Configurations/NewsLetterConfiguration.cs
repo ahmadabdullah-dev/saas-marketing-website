@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 
-public class NewsletterSubscriberConfiguration : IEntityTypeConfiguration<NewsletterSubscriber>
+public class NewsletterSubscriberConfiguration : IEntityTypeConfiguration<NewsLetterSubscriber>
 {
-    public void Configure(EntityTypeBuilder<NewsletterSubscriber> builder)
+    public void Configure(EntityTypeBuilder<NewsLetterSubscriber> builder)
     {
         builder.ToTable("NewsletterSubscribers");
         builder.HasKey(x => x.Id);
