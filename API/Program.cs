@@ -2,6 +2,7 @@ using Scalar.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddApplication();
 builder.Services.AddInfrastructure(builder.Configuration);
 
 builder.Services.AddControllers();
@@ -15,7 +16,11 @@ if (app.Environment.IsDevelopment())
     app.MapScalarApiReference();
 }
 
+await app.Services.SeedDataAsync();
+
 app.UseHttpsRedirection();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 
