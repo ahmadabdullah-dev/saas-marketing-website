@@ -1,4 +1,6 @@
-﻿namespace API;
+﻿using Microsoft.AspNetCore.RateLimiting;
+
+namespace API;
 
 public static class DependencyInjection
 {
@@ -24,6 +26,19 @@ public static class DependencyInjection
                           .AllowCredentials();
                 });
         });
+
+        services.AddRateLimiter(options =>
+        {
+            options.AddFixedWindowLimiter("authLimiter", opt =>
+            {
+                opt.Window = TimeSpan.FromSeconds(10);
+                opt.PermitLimit = 3;
+                opt.QueueLimit = 0;
+            });
+
+            options.RejectionStatusCode = 429;
+        });
+
         return services;
     }
 }
