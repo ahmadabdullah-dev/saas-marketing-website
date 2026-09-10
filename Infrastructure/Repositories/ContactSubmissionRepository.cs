@@ -15,4 +15,4 @@ public class ContactSubmissionRepository : Repository<ContactSubmission>, IConta
         await DbSet.Where(x => x.Email == email)
             .OrderByDescending(x => x.CreatedAtUtc)
             .ToListAsync();
-}
+} 
