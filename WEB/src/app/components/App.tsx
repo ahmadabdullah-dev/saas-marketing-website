@@ -1,9 +1,13 @@
-import LoginForm from "../../features/auth/LoginForm";
+import { Outlet } from "react-router";
+import Header from "./Header";
+import Footer from "./Footer";
 
 export default function App() {
   return (
     <div>
-      <LoginForm />
+      <Header/>
+      <Outlet/>
+      <Footer/>
     </div>
   );
 }

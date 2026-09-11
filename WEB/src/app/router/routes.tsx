@@ -1,8 +1,10 @@
-import { createBrowserRouter, Navigate } from "react-router";
+import { createBrowserRouter } from "react-router";
 import App from "../components/App";
 import NotFound from "../../features/errors/NotFound";
 import ErrorPage from "../../features/errors/ErrorPage";
 import LoginForm from "../../features/auth/LoginForm";
+import LandingPage from "../components/LandingPage";
+import AdminDashbord from "../components/AdminDashbord";
 
 export const routes = createBrowserRouter([
   {
@@ -10,7 +12,8 @@ export const routes = createBrowserRouter([
     element: <App />,
     errorElement: <ErrorPage />,
     children: [
-      { index: true, element: <Navigate to="/dashboard" replace /> },
+      { index: true, element: <LandingPage /> },
+      { path: "admin", element: <AdminDashbord /> },
       { path: "login", element: <LoginForm /> },
     ],
   },
