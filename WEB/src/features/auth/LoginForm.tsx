@@ -129,13 +129,6 @@ export default function LoginForm() {
               {loginAsync.error && (
                 <Alert severity="error">{loginAsync.error.message}</Alert>
               )}
-              <Button
-                variant="outlined"
-                fullWidth
-                onClick={() => navigate("/register")}
-              >
-                Don't have an account
-              </Button>
             </Stack>
           </Box>
         </Paper>
