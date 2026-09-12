@@ -5,6 +5,7 @@ import ErrorPage from "../../features/errors/ErrorPage";
 import LoginForm from "../../features/auth/LoginForm";
 import LandingPage from "../components/LandingPage";
 import AdminDashbord from "../components/AdminDashbord";
+import PricingTable from "../../features/pricing/PricingTable";
 
 export const routes = createBrowserRouter([
   {
@@ -14,6 +15,8 @@ export const routes = createBrowserRouter([
     children: [
       { index: true, element: <LandingPage /> },
       { path: "admin", element: <AdminDashbord /> },
+      { path: "pricing", element: <PricingTable/> },
+
       { path: "login", element: <LoginForm /> },
     ],
   },
