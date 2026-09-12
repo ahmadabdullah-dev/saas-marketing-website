@@ -13,6 +13,7 @@ export default function AppLogoWithName() {
         gap: 1,
         textDecoration: "none",
         width: "fit-content",
+        mx:1
       }}
     >
       <Box
