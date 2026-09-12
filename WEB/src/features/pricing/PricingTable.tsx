@@ -1,6 +1,6 @@
 import { Box, Stack, Typography } from "@mui/material";
 import PlanCard from "./PlanCard";
-import { PLANS } from "./plans";
+import { PLANS } from "./PLANS";
 import {Grid} from "@mui/material";
 export default function PricingTable() {
   return (
