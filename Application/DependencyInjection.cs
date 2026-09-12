@@ -8,7 +8,8 @@ public static class DependencyInjection
     {
         services.AddScoped<IAuthService, AuthService>();
         services.AddScoped<IEmailService, EmailService>();
-
+        services.AddScoped<INewsLetterSubscriberService, NewsLetterSubscriberService>();
+        
         return services;
     }
 }
