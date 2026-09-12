@@ -8,7 +8,7 @@ import {
   Container,
 } from "@mui/material";
 import { Link as RouterLink } from "react-router";
-import TemporaryDrawer from "../TemporaryDrawer";
+import TemporaryDrawer from "../TemporaryDrawer/TemporaryDrawer";
 import NavDropdownMenu from "./NavDrawDownMenu";
 import { NAV_LINKS } from "./navLinks";
 import { useEffect, useState } from "react";

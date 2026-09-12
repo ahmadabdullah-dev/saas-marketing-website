@@ -15,9 +15,9 @@ import MenuIcon from "@mui/icons-material/Menu";
 import AddIcon from "@mui/icons-material/Add";
 import { useState } from "react";
 import { useNavigate } from "react-router";
-import Footer from "./Footer";
-import type { NavLink } from "./Header/navLinks";
-import AppLogoWithName from "./AppLogoWithName";
+import type { NavLink } from "../Header/navLinks";
+import AppLogoWithName from "../AppLogoWithName";
+import TemporaryDrawerFooter from "./TemporaryDrawerFooter";
 
 export default function TemporaryDrawer({ items }: { items: NavLink[] }) {
   const [open, setOpen] = useState(false);
@@ -278,7 +278,7 @@ export default function TemporaryDrawer({ items }: { items: NavLink[] }) {
               mt: "auto",
             }}
           >
-            <Footer />
+            <TemporaryDrawerFooter />
           </Box>
         </Box>
       </Drawer>
