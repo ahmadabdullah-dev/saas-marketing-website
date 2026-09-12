@@ -1,13 +1,17 @@
 import { Outlet } from "react-router";
 import Header from "./Header/Header";
 import Footer from "./Footer";
+import { Box } from "@mui/material";
 
 export default function App() {
   return (
-    <div>
+    <Box sx={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <Header />
-      <Outlet />
+      <Box sx={{ height: { xs: 56, md: 64 } }} />
+      <Box component="main" sx={{ flex: 1 }}>
+        <Outlet />
+      </Box>
       <Footer />
-    </div>
+    </Box>
   );
 }
